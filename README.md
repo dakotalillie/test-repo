@@ -1,3 +1,3 @@
 # test-repo
 
-test
+This readme references the master branch
