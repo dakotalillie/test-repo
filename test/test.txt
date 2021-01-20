@@ -1,2 +1,2 @@
-This file contains another reference to master
+This file contains another reference to main
 
