@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: arn:aws:iam::996879208861:role/TestCIRole
+          aws-region: us-west-1
+
+      - name: Print Caller Identity
+        run: |
+          aws sts get-caller-identity
